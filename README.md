@@ -7,5 +7,5 @@ Step 2 : ```python NumGather.py ```
 
 When you are entering phone number include prefix (+<country_code>)
 
-eg : if an indian number :: +91<number>
+eg : if an indian number :: +919874512362
 
