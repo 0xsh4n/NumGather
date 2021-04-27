@@ -10,8 +10,11 @@ eg : if an indian number :: +919874512362
 Detailed Installation :
 
    ```git clone https://github.com/mr-sh4n/NumGatherer.git```
+   
    ```cd NumGatherer ```
+   
    ```pip install -r requirements.txt```
+   
    ```python NumGather.py```
 
 Screenshot provided here
