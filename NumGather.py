@@ -8,7 +8,7 @@ from pyfiglet import Figlet
 
 pyfiglet.print_figlet("Num Gather",'banner')
 print("This tool was made by H1DD3N_SH4D0W for SecHunt-OS")
-print("\t\t https://github.com/mr-sh4n")
+print("\t\t\t Github Profile : https://github.com/mr-sh4n")
 
 print("If indian Number : +91987456321")
 number = input ("Enter your mobile number : ")
