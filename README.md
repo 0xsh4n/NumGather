@@ -1,7 +1,7 @@
 # NumGatherer
 A Tool to show the country of origin of a phone number and it's ISP :D
  
-USAGE : ```python NumGather.py ```
+USAGE : ``` ./numgather.sh ```
 
 When you are entering phone number include prefix (+<country_code>)
 
@@ -14,10 +14,10 @@ Detailed Installation :
    ```cd NumGatherer ```
    
    ```chmod +x *```
+    
+   ```bash setup.sh ```   or  ```./setup.sh```
    
-   ```bash setup.sh ``` or ```./setup.sh```
-   
-   ```bash numgather.sh ``` or  ```./numgather.sh```
+   ```bash numgather.sh ```   or   ```./numgather.sh```
 
 Screenshot provided here
 
