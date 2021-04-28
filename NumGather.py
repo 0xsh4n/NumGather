@@ -1,6 +1,5 @@
 import pyfiglet
 import phonenumbers
-import socket
 
 from phonenumbers import carrier
 from phonenumbers import geocoder
@@ -16,7 +15,4 @@ phone = phonenumbers.parse(number)
 print("The country of this Phone number is : "+geocoder.description_for_number(phone, 'en'))
 print("The ISP of the phone number is : "+carrier.name_for_number(phone,'en'))
 
-hostname = socket.gethostname()
-ip_address = socket.gethostbyname(hostname)
-print(f"Your Hostname: {hostname}")
-print(f"Your IP Address: {ip_address}")
+areadatabase.find_area(number)
