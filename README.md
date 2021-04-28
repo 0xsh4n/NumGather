@@ -13,9 +13,11 @@ Detailed Installation :
    
    ```cd NumGatherer ```
    
-   ```bash setup.sh ```
+   ```chmod +x *```
    
-   ```python NumGather.py```
+   ```bash setup.sh ``` or ```./setup.sh```
+   
+   ```bash numgather.sh ``` or  ```./numgather.sh```
 
 Screenshot provided here
 
