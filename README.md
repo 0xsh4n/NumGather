@@ -1,5 +1,5 @@
 # NumGatherer
-A simple python tool to show the country of origin of a phone number and it's ISP :D
+A Tool to show the country of origin of a phone number and it's ISP :D
  
 USAGE : ```python NumGather.py ```
 
@@ -9,11 +9,11 @@ eg : if an indian number :: +919874512362
 
 Detailed Installation :
 
-   ```git clone https://github.com/mr-sh4n/NumGatherer.git```
+   ```git clone https://github.com/mr-sh4n/NumGather.git```
    
    ```cd NumGatherer ```
    
-   ```pip install -r requirements.txt```
+   ```bash setup.sh ```
    
    ```python NumGather.py```
 
