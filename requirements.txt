@@ -1,0 +1,2 @@
+phonenumbers>=8.13.0
+pyfiglet>=1.0.0

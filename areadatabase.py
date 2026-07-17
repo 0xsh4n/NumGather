@@ -2705,8 +2705,42 @@ area_database_india = [
       ["8685","VODAFONE","DELHI"]
 ]
 
+def lookup_india(phone_number):
+      """Return India MSC matches as list of {prefix, operator, circle}."""
+      matches = []
+      if not phone_number or "+91" not in phone_number:
+            return matches
+      # National significant digits after +91 (typically 10 digits for mobile)
+      digits = "".join(c for c in phone_number if c.isdigit())
+      if digits.startswith("91"):
+            national = digits[2:]
+      else:
+            national = digits
+      if len(national) < 4:
+            return matches
+      # Prefer longest prefix match (4-digit MSC blocks in this DB)
+      for prefix, operator, circle in area_database_india:
+            if national.startswith(prefix):
+                  matches.append({
+                        "prefix": prefix,
+                        "operator": operator,
+                        "circle": circle,
+                  })
+      return matches
+
+
 def find_area(phone_number):
-      for i in area_database_india:
-            if(phone_number.find("+91") != -1 and phone_number.find(i[0], 2, 7) != -1):
-                  print("Area is " , i[2])
-            
+      """Print India area/circle (legacy). Prefer lookup_india() for structured data."""
+      matches = lookup_india(phone_number)
+      if not matches:
+            if phone_number and "+91" in phone_number:
+                  print("Area is unknown (no MSC match in local database)")
+            return matches
+      # Deduplicate circles while preserving order
+      seen = set()
+      for m in matches:
+            key = (m["circle"], m["operator"])
+            if key not in seen:
+                  seen.add(key)
+                  print("Area is", m["circle"], f"({m['operator']})")
+      return matches
